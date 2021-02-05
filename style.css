@@ -1,0 +1,75 @@
+@font-face {
+  src: url(fonts/FuturaPTBook.otf);
+  font-family: "FuturaPT";
+}
+@font-face {
+  src: url(fonts/FuturaPTExtraBold.otf);
+  font-family: "FuturaPTExtraBold";
+}
+body {
+  box-sizing: border-box;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 80px 40px 80px;
+  color: #A89365;
+  text-transform: uppercase;
+}
+.heading h1 {
+  margin: 0px;
+  font-family: FuturaPTExtraBold, serif;
+  font-size: 48px;
+  line-height: 100%;
+}
+.heading span {
+  font-size: 18px;
+  font-family: "FuturaPT", serif;
+  height: 23px;
+  align-self: flex-end;
+  position: relative;
+}
+
+.splide__track {
+  margin: 0 80px;
+}
+.splide__slide {
+  width: 410px;
+  height: 764px;
+}
+.splide__slide h2 {
+  color: #A89365;
+  font-family: "FuturaPT", serif;
+  font-weight: 700;
+  font-size: 32px;
+  margin: 20px 0;
+}
+.splide__slide img {
+  object-fit: cover;
+}
+
+@media (max-width: 1280px) {
+  .splide__track {
+    margin: 0 40px;
+  }
+  .splide__slide img {
+    height: 360px;
+    width: 270px;
+  }
+}
+@media (max-width: 600px) {
+  .splide__track {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 320px) {
+  .splide__track {
+    margin: 0 10px;
+  }
+  .splide__slide img {
+    width: 300px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

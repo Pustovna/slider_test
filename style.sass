@@ -1,0 +1,60 @@
+@font-face
+  src: url(fonts/FuturaPTBook.otf)
+  font-family: 'FuturaPT'
+
+@font-face
+  src: url(fonts/FuturaPTExtraBold.otf)
+  font-family: 'FuturaPTExtraBold'
+
+body
+  box-sizing: border-box
+
+.heading
+  display: flex
+  justify-content: space-between
+  margin: 0 80px 40px 80px
+  color: #A89365
+  text-transform: uppercase
+  & h1
+    margin: 0px
+    font-family: FuturaPTExtraBold, serif
+    font-size: 48px
+    line-height: 100%
+  & span
+    font-size: 18px
+    font-family: 'FuturaPT', serif
+    height: 23px
+    align-self: flex-end
+    position: relative
+
+.splide
+  &__track
+    margin: 0 80px
+  &__slide
+    width: 410px
+    height: 764px
+    & h2
+      color: #A89365
+      font-family: 'FuturaPT', serif
+      font-weight: 700
+      font-size: 32px
+      margin: 20px 0
+    & img
+      object-fit: cover
+@media (max-width: 1280px)
+  .splide
+    &__track
+      margin: 0 40px
+    &__slide img
+      height: 360px
+      width: 270px
+@media (max-width: 600px)
+  .splide
+    &__track
+      margin: 0 20px
+@media (max-width: 320px)
+  .splide
+    &__track
+      margin: 0 10px
+    &__slide img
+      width: 300px
