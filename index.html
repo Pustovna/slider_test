@@ -5,20 +5,23 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@1.3.3/dist/css/splide.min.css">
     <link rel="stylesheet" href="style.css" />
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 </head>
 <body>
  <div class="container">
     <div class="heading">
         <h1>Портфолио</h1>
-        <span>Смотреть все бренды &#8594</span>
+        <a href="#">Смотреть портфолио</a>
     </div>
      <div class="splide">
          <div class="splide__track">
              <ul class="splide__list">
                  <li class="splide__slide">
                      <img src="images/portfolio_2.png" alt="Домашний кинотеатр с изюминкой">
-                     <h2>Домашний кинотеатр
-                         с изюминкой</h2>
+                     <h2>Домашний кинотеатр с изюминкой</h2>
                      <p>В нашем новом проекте домашнего кинотеатра задача была в целом довольно типичной – построить систему с использованием встроенных акустических систем. </p>
                  </li>
                  <li class="splide__slide">
@@ -41,8 +44,8 @@
          </div>
      </div>
      <div class="buttons">
-         <button type="button">Заказать выезд специалиста</button>
-         <button type="button">Заказать проектирование</button>
+         <button type="button" class="buttons-visit">Заказать выезд специалиста</button>
+         <button type="button" class="buttons-project">Заказать проектирование</button>
      </div>
  </div>
  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@1.3.3/dist/js/splide.min.js"></script>

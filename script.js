@@ -3,23 +3,25 @@ document.addEventListener( 'DOMContentLoaded', function () {
         type   : 'loop',
         fixedWidth: '410px',
         gap: '40px',
+        accessibility: true,
+        keyboard: true,
         breakpoints: {
+            2500: {
+                pagination: false
+            },
             1280: {
                 fixedWidth: '270px',
-                fixedHeight: '568px'
+                pagination: false
             },
             600: {
-                perPage: 2,
                 pagination: true,
-                gap: '20px',
                 fixedWidth: '270px',
-                fixedHeight: '548px'
+                gap: '20px'
             },
             320: {
                 perPage: 1,
                 pagination: true,
                 fixedWidth: '300px',
-                fixedHeight: '548px'
             }
         }
     } ).mount();

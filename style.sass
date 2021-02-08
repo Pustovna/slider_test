@@ -6,8 +6,14 @@
   src: url(fonts/FuturaPTExtraBold.otf)
   font-family: 'FuturaPTExtraBold'
 
+@font-face
+  src: url(fonts/FuturaPTBold.otf)
+  font-family: 'FuturaPTBold'
+
 body
   box-sizing: border-box
+  margin: 0
+
 
 .heading
   display: flex
@@ -15,46 +21,203 @@ body
   margin: 0 80px 40px 80px
   color: #A89365
   text-transform: uppercase
+  user-select: none
   & h1
-    margin: 0px
+    margin: 0
     font-family: FuturaPTExtraBold, serif
     font-size: 48px
     line-height: 100%
-  & span
+  & a
+    text-decoration: none
     font-size: 18px
     font-family: 'FuturaPT', serif
     height: 23px
+    color: #A89365
     align-self: flex-end
     position: relative
+    margin-right: 18px
+    &::after
+      content: ""
+      position: absolute
+      height: 5.75px
+      width: 5.75px
+      border-top: 1.44px solid #A89365
+      border-right: 1.44px solid #A89365
+      border-radius: 1px
+      top: 7.9px
+      right: -22.37px
+      display: block
+      transform: rotate(45deg)
+    &::before
+      content: ''
+      width: 16.53px
+      height: 1.44px
+      background-color: #A89365
+      position: absolute
+      top: 11px
+      right: -23px
+      border-radius: 1px
+    &:hover
+      color: #c8ab5c
+      text-decoration: underline
+@media (max-width: 1280px)
+  .heading
+    margin: 0 40px 40px 40px
+    & h1
+      font-size: 32px
+    & a
+      font-size: 18px
+      line-height: 23px
+@media (max-width: 600px)
+  .heading
+    margin: 0 20px 20px 20px
+@media (max-width: 320px)
+  .heading
+    margin: 0 10px 20px 10px
+    flex-direction: column
+    & h1
+      font-size: 24px
+      margin-bottom: 10px
+      font-family: 'FuturaPTBold', serif
+    & a
+      align-self: flex-start
 
 .splide
   &__track
     margin: 0 80px
   &__slide
     width: 410px
-    height: 764px
+    cursor: pointer
+    &:hover h2,
+    &:hover img
+      filter: contrast(120%)
+      text-decoration: underline
+    &:focus
+      outline: none
     & h2
       color: #A89365
-      font-family: 'FuturaPT', serif
-      font-weight: 700
+      font-family: 'FuturaPTBold', serif
       font-size: 32px
       margin: 20px 0
+      line-height: 100%
     & img
       object-fit: cover
+    & p
+      margin: 0
+      font-family: 'FuturaPT', serif
+      font-size: 20px
+      line-height: 30px
+      color: #575757
+  &__arrow
+    background-color: transparent
+    background-size: cover
+    background-position: center center
+    width: 16px
+    height: 32px
+    top: 270px
+    &--prev
+      background-image: url("images/arrow-prev.svg")
+      left: 32px
+    &--next
+      background-image: url("images/arrow-next.svg")
+      right: 32px
+    & svg
+      display: none
+  &__pagination
+    &__page
+      width: 12px
+      height: 12px
+      margin-right: 20px
+      background-color: #F2F2F2
+      &.is-active
+        background-color: #A89365
+        transform: none
 @media (max-width: 1280px)
   .splide
     &__track
       margin: 0 40px
-    &__slide img
-      height: 360px
-      width: 270px
+    &__slide
+      & h2
+        font-size: 24px
+      & p
+        font-size: 16px
+        line-height: 24px
+      & img
+        height: 360px
+        width: 270px
+    &__arrow
+      width: 8px
+      height: 16px
+      top: 180px
+      &--prev
+        left: 16px
+      &--next
+        right: 16px
 @media (max-width: 600px)
   .splide
     &__track
       margin: 0 20px
+    &__arrow
+      display: none
+    &__pagination
+      bottom: -50px
 @media (max-width: 320px)
   .splide
     &__track
       margin: 0 10px
-    &__slide img
+    &__slide
+      & h2
+        margin: 10px 0
+        line-height: 24px
+      & img
+        width: 300px
+
+
+.buttons
+  display: flex
+  justify-content: center
+  margin-top: 40px
+  & button
+    width: 360px
+    height: 60px
+    outline: none
+    text-transform: uppercase
+    font-family: FuturaPT, serif
+    font-size: 18px
+    line-height: 23px
+    cursor: pointer
+    transition-property: background-color, color
+    transition-duration: 400ms
+  &-visit
+    margin-right: 40px
+    border: 1px solid #A89365
+    background-color: transparent
+    color: #A89365
+    &:hover
+      color: #c8ab5c
+      border: 1px solid #c8ab5c
+  &-project
+    color: white
+    background-color: #A89365
+    border: none
+    &:hover
+      background-color: #c8ab5c
+@media (max-width: 1280px)
+  .buttons
+    & button
       width: 300px
+      height: 45px
+@media (max-width: 600px)
+  .buttons
+    flex-direction: column
+    margin: 52px 20px 0 20px
+    &-visit
+      margin-bottom: 20px
+    & button
+      max-width: 560px
+      width: 100%
+@media (max-width: 320px)
+  .buttons
+    margin: 52px 10px 0 10px
+
+
