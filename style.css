@@ -37,7 +37,7 @@ body {
   color: #A89365;
   align-self: flex-end;
   position: relative;
-  margin-right: 18px;
+  margin-right: 18pxte;
 }
 .heading a::after {
   content: "";
